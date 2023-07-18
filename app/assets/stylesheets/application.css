@@ -1,15 +1,50 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(49, 92, 233);
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  background: rgb(49, 92, 233);
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin: auto;
+  padding: 1rem;
+  color: white;
+  margin-top: 1rem;
+}
+
+.input {
+  padding: 0.6rem 1rem;
+  width: 20rem;
+  border-radius: 5px;
+  outline: none;
+}
+
+.btn {
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  margin: 0.5rem;
+  background: white;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
