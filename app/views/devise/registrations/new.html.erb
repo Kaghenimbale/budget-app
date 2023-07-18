@@ -1,14 +1,11 @@
-<div class="main-page">
-<div>
+<nav class="navbar bg-primary d-flex justify-content-between p-1">
   <%= link_to home_index_path do %>
     <i class="bi bi-arrow-left btn"></i>
   <%end%>
-</div>
-<div class="btns">
-  <%= link_to 'Register', new_user_registration_path, class:"btn"  %>
-  <%= link_to 'Log In', new_user_session_path, class:"btn"  %>
-</div> </br>
-<h2>Sign up</h2>
+  <h3>REGISTER</h3>
+  <h4>NEXT</h4>
+</nav>
+<div class="main-page">
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
