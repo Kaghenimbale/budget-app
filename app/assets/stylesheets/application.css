@@ -2,16 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
 }
 
-.main {
+.main-page {
   display: flex;
   flex-direction: column;
-  background-color: rgb(49, 92, 233);
   align-items: center;
   gap: 1rem;
+  background: rgb(239, 239, 239);
+  padding: 2rem 0;
   width: 100vw;
   height: 100vh;
 }
@@ -36,11 +35,22 @@
   outline: none;
 }
 
+.input-register {
+  width: 80vw;
+  border: none;
+  border-bottom: 2px solid lightgray;
+}
+
+.btn-register {
+  border: none;
+}
+
 .btn {
   padding: 0.6rem 1rem;
   border-radius: 5px;
   margin: 0.5rem;
-  background: white;
+  background: rgb(49, 92, 233);
+  color: white;
 }
 
 .color-btn {
