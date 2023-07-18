@@ -11,6 +11,7 @@
   flex-direction: column;
   background-color: rgb(49, 92, 233);
   align-items: center;
+  gap: 1rem;
   width: 100vw;
   height: 100vh;
 }
@@ -40,6 +41,10 @@
   border-radius: 5px;
   margin: 0.5rem;
   background: white;
+}
+
+.color-btn {
+  background: rgb(49, 92, 233);
 }
 
 .btns {
