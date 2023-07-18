@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'groups/index'
+  get 'groups/show'
+  get 'groups/destroy'
+  get 'transactions/index'
+  get 'transactions/show'
+  get 'transactions/destroy'
   devise_for :users
   get 'home/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
