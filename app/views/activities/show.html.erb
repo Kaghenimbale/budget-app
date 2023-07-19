@@ -1,0 +1,34 @@
+<%= link_to user_category_activities_path do %>
+  <i class="bi bi-arrow-left btn">Back</i>
+<%end%>
+
+<main>
+  <article class="container">
+          <div class=" child item-wrapper">
+            <div class="photo">
+              <% if @category.icon.attached? %>
+                <%= image_tag url_for(@category.icon), class: "image" %>
+              <% end %>
+
+            </div>
+            <div class="user_name">
+              <p class="muted name"><%= @activity.name %></p>
+            </div>
+          </div>
+          <div class="child">
+            <p class="muted">some description goes here!</p>
+          </div>
+        <div class="child description">
+          <p class="transaction_num">Transaction N<sup>o</sup>3412000983</p>
+           <p class="muted">
+              <i class="far fa-calendar"></i>
+              <%= @activity.created_at %></p>
+        </div>
+          <div class="child amount_wrap">
+            <p class="amount">Total payment</p>
+            <p class="amount">$<%= @activity.amount %></p>
+          </div>
+        </div>
+  </article>
+  <%= button_to "Delete transaction", user_category_activity_path(@user, @category, @activity), class: "btn", method: :delete, data: { confirm: "Are you sure?" } %>
+ </main>

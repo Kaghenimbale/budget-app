@@ -1,0 +1,16 @@
+<nav class="navbar bg-primary p-2" data-bs-theme="dark">
+<%= link_to root_path do %>
+  <i class="bi bi-list icon"></i>
+<%end%>
+
+<h3>Transaction</h3>
+
+<div class="d-flex gap-2">
+  <i class="bi bi-search icon"></i>
+
+<% if user_signed_in? %>
+  <%= link_to("Sign Out", sign_out_user_path, class: "btn", data: { turbo_method: :delete, turbo_confirm: 'Are you sure' }) %>
+<% end %>
+
+</div>
+</nav>
