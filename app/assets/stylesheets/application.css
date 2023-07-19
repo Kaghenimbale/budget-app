@@ -27,6 +27,13 @@
   margin-top: 1rem;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
 .input {
   padding: 0.6rem 1rem;
   width: 20rem;
@@ -82,7 +89,7 @@ p {
 }
 
 .card {
-  justify-content: center;
+  display: flex;
 }
 
 .card-body {
@@ -91,8 +98,13 @@ p {
   align-items: center;
 }
 
+.card-description {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .image {
-  background: red;
   width: 4rem;
   height: 4rem;
 }
