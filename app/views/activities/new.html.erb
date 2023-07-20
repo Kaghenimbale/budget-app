@@ -1,4 +1,11 @@
-<div class="main-page">
+<main>
+  <%= render partial: "shared/nav",
+  locals: {
+    text: "Back",
+    url: user_category_activities_path(current_user, @category),
+    heading: "ADD NEW TRANSACTION"
+  } %>
+
   <%= form_with model: @activity, url: user_category_activities_path(current_user, @category),  method: :post do |form| %>
     <% if @activity.errors.any? %>
       <div style="color: red">
@@ -12,13 +19,13 @@
         </ul>
       </div>
     <% end %>
-    <div class="form">
+
     <div class="field">
-      <%= form.text_field :name, placeholder: "Name", class:"input" %>
+      <%= form.text_field :name, placeholder: "Name" %>
     </div>
 
     <div class="field">
-      <%= form.number_field :amount, placeholder: "Amount", class:"input" %>
+      <%= form.number_field :amount, placeholder: "Amount" %>
     </div>
 
     <div class="field">
@@ -26,11 +33,10 @@
                              current_user.categories,
                              :id,
                              :name,
-                             include_blank: "Select category", class:"input" %>
+                             include_blank: "Select category" %>
     </div>
 
     <div class="actions">
-      <%= form.submit class:"btn" %>
+      <%= form.submit %>
     </div>
   <% end %>
-  </div>

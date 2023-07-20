@@ -1,44 +1,56 @@
-<nav class="navbar bg-primary d-flex justify-content-between p-1">
-  <%= link_to root_path do %>
-    <i class="bi bi-arrow-left btn"></i>
-  <%end%>
-  <h3>REGISTER</h3>
-  <h4>NEXT</h4>
-</nav>
-<div class="main-page">
+<%= render partial: "shared/nav",
+locals: {
+  text: "Back",
+  url: root_path,
+  heading: "REGISTER"
+} %>
+<main class="registrations">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    <div id="container">
+      <div class="field" id="register_photo">
+        <div class="photo reg">
+          <%= image_tag "https://tse4.mm.bing.net/th?id=OIP.VwOipFm0fDDr_KOzoyrgVwAAAA&pid=Api&P=0&h=180",
+          class: "profile_img",
+          id: "p_img" %>
+        </div>
+        <div class="custom-file-input">
+          <%= f.file_field :name, id: "file-upload" %>
+          <label for="file-upload" id="file-upload-label">Upload photo</label>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <%= f.text_field :name, placeholder: "Name" %>
+    </div>
 
-  <div class="form">
-  <div class="field">
-    <%= f.label :full_name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "email", class:"input input-register" %>
-  </div>
+    <div class="field">
+      <%= f.email_field :email,
+                    autofocus: true,
+                    autocomplete: "email",
+                    placeholder: "Email" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"input input-register" %>
-  </div>
+    <div class="field">
+      <%= f.password_field :password,
+                       autocomplete: "new-password",
+                       placeholder: "Password" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", class:"input input-register" %>
-  </div>
+    <div class="field">
+      <%= f.password_field :password_confirmation,
+                       autocomplete: "new-password",
+                       placeholder: "Confirm password" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"input input-register" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up", class:"btn btn-register" %>
-  </div>
+    <div class="actions">
+      <%= f.submit "Sign up" %>
+    </div>
+    <div id="field" class="field have_account">
+      <p>Already have an account ?</p>
+      <%= render "devise/shared/links" %>
+    </div>
   <% end %>
-  
-  <%= render "devise/shared/links" %>
-  </div>
-</div>
+
+</main>

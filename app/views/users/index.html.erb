@@ -1,10 +1,9 @@
-<div class="main-page">
-<div class="btns">
-  <%= link_to 'Register', new_user_registration_path, class:"btn"  %>
-  <%= link_to 'Log In', new_user_session_path, class:"btn"  %>
-</div> </br>
-<div class="d-flex flex-column align-items-center">
-<h3>Cash Budget App</h3>
-<h4>Welcome to my Cash App.</h4>
-</div>
-</div>
+ <div id="splash_screen">
+  <div class="splash_text_wrap">
+    <h1>Welcome to Musong Budget System</h1>
+  </div>
+  <div class="splash_btn_wrap">
+    <%= link_to "Login", new_user_session_path, class: "splash_btn", id: "login" %>
+    <%= link_to "Sign up", new_user_registration_path, class: "splash_btn", id: "signup" %>
+  </div>
+ </div>
