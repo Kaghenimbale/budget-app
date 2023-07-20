@@ -12,6 +12,10 @@
   color: var(--textColor);
 }
 
+body {
+  background: rgb(247, 247, 247);
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -65,7 +69,6 @@ nav a {
 }
 
 main {
-  background: var(--mainWhite);
   border: 1px solid whitesmoke;
   margin-top: 100px;
 }
@@ -135,6 +138,7 @@ main {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   margin-top: 0.5rem;
+  background: none;
 }
 
 .user_name {
@@ -169,6 +173,10 @@ main {
   color: var(--secondaryGreen);
 }
 
+.list_item {
+  background: white;
+}
+
 .list a,
 .list_item {
   width: 100%;
@@ -176,7 +184,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }

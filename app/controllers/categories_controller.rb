@@ -1,8 +1,5 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!
-  # before_action :set_user
-  # before_action :set_category, only:  %i[show edit update destroy]
-  # load_and_authorize_resource
 
   def index
     @user = current_user
@@ -17,7 +14,6 @@ class CategoriesController < ApplicationController
 
   def new
     @category = Category.new
-    # @category = Category.new(author: current_user)
   end
 
   def create
