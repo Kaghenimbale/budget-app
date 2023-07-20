@@ -16,5 +16,10 @@ RSpec.describe 'Hello world', type: :system do
         visit root_path
         expect(page).to have_content('Password')
     end
+
+    it 'shows the right content' do
+        visit root_path
+        expect(page).to have_content('NEXT')
+    end
   end
 end
