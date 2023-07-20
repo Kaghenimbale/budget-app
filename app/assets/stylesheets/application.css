@@ -13,7 +13,7 @@
 }
 
 body {
-  background: rgb(247, 247, 247);
+  background: rgb(243, 243, 243);
 }
 
 nav {
@@ -69,7 +69,6 @@ nav a {
 }
 
 main {
-  border: 1px solid whitesmoke;
   margin-top: 100px;
 }
 
