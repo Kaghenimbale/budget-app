@@ -1,9 +1,3 @@
-/*
- *= require font-awesome
- */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
 :root {
   --mainBlue: #3778c2;
   --secondaryGreen: #5fb523;
