@@ -67,7 +67,7 @@ nav a {
 
 main {
   background: var(--mainWhite);
-  border: 4px solid #999;
+  border: 1px solid whitesmoke;
   height: calc(100vh - 70px);
 }
 
