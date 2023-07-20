@@ -67,7 +67,7 @@ nav a {
 main {
   background: var(--mainWhite);
   border: 1px solid whitesmoke;
-  margin-top: 60px;
+  margin-top: 100px;
 }
 
 #splash_screen {
@@ -454,7 +454,11 @@ form {
 }
 
 @media (min-width: 768px) {
-  main,
+  main {
+    margin: 90px auto;
+    width: 90%;
+  }
+
   nav,
   .add_btn_wrap {
     width: 90%;
