@@ -45,7 +45,6 @@ nav a {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   width: 100%;
-  margin-top: 60px;
 }
 
 .notice {
@@ -67,7 +66,7 @@ nav a {
 
 main {
   background: var(--mainWhite);
-  height: calc(100vh - 70px);
+  margin-top: 60px;
 }
 
 #splash_screen {
