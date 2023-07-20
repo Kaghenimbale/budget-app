@@ -58,7 +58,7 @@
 
 [Live Demo](https://budget-app-n0v3.onrender.com)
 
-[Video Explanation]()
+[Video Explanation](https://www.awesomescreenshot.com/video/19275763?key=0c0ff24da11367227bf2b66595271140)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
