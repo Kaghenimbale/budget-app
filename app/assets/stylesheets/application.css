@@ -1,5 +1,5 @@
 :root {
-  --mainBlue: #3778c2;
+  --mainBlue: #1971d5;
   --secondaryGreen: #5fb523;
   --textColor: #434b54;
   --mainWhite: #f0f0f0;
@@ -66,7 +66,8 @@ nav a {
 
 main {
   background: var(--mainWhite);
-  margin-top: 60px;
+  border: 1px solid whitesmoke;
+  margin-top: 100px;
 }
 
 #splash_screen {
@@ -453,7 +454,11 @@ form {
 }
 
 @media (min-width: 768px) {
-  main,
+  main {
+    margin: 90px auto;
+    width: 90%;
+  }
+
   nav,
   .add_btn_wrap {
     width: 90%;
