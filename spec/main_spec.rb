@@ -8,13 +8,13 @@ RSpec.describe 'Hello world', type: :system do
     end
 
     it 'shows the right content' do
-        visit root_path
-        expect(page).to have_content('Email')
+      visit root_path
+      expect(page).to have_content('Email')
     end
 
     it 'shows the right content' do
-        visit root_path
-        expect(page).to have_content('Password')
+      visit root_path
+      expect(page).to have_content('Password')
     end
   end
 end
