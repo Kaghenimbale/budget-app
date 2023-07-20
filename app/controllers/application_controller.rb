@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   include Devise::Controllers::Helpers
   protect_from_forgery with: :exception
 
-  before_action :update_allowed_parameters, if: :devise_controller_with_parameters?
+  before_action :update_allowed_parameters, if: :devise_controller?
 
   def after_sign_up_path_for(_resource)
     new_user_session_path
@@ -14,8 +14,8 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  def devise_controller_with_parameters?
-    devise_controller? && !params.empty?
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:password_confirmation])
   end
 
   def update_allowed_parameters

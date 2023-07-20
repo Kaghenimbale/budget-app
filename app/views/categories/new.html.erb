@@ -1,5 +1,11 @@
 <main>
-<div class="main-page">
+  <%= render partial: "shared/nav",
+  locals: {
+    text: "Back",
+    url: user_categories_path(current_user),
+    heading: "ADD NEW CATEGORY"
+  } %>
+
   <%= form_with model: @category, url: user_categories_path(current_user),  method: :post do |form| %>
     <% if @category.errors.any? %>
       <div style="color: red">
@@ -14,9 +20,8 @@
       </div>
     <% end %>
 
-    <div class="form">
     <div class="field">
-      <%= form.text_field :name, placeholder: "Name", class:"input" %>
+      <%= form.text_field :name, placeholder: "Name" %>
     </div>
 
     <div class="field">
@@ -24,9 +29,7 @@
     </div>
 
     <div class="actions">
-      <%= form.submit class:"btn" %>
-    </div>
+      <%= form.submit %>
     </div>
   <% end %>
-  </div>
 </main>

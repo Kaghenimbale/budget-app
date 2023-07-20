@@ -1,13 +1,15 @@
-<%= link_to user_category_activities_path do %>
-  <i class="bi bi-arrow-left btn">Back</i>
-<%end%>
-
+<%= render partial: "shared/nav",
+locals: {
+  text: "Back",
+  url: user_category_activities_path(@user, @category),
+  heading: "DETAILS"
+} %>
 <main>
-  <article class="container">
+  <article>
           <div class=" child item-wrapper">
             <div class="photo">
               <% if @category.icon.attached? %>
-                <%= image_tag url_for(@category.icon), class: "image" %>
+                <%= image_tag url_for(@category.icon), class: "profile_img" %>
               <% end %>
 
             </div>
@@ -30,5 +32,5 @@
           </div>
         </div>
   </article>
-  <%= button_to "Delete transaction", user_category_activity_path(@user, @category, @activity), class: "btn", method: :delete, data: { confirm: "Are you sure?" } %>
+  <%= button_to "Delete transaction", user_category_activity_path(@user, @category, @activity), class: "delete_btn", method: :delete, data: { confirm: "Are you sure?" } %>
  </main>
