@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 :root {
-  --mainBlue: #3778c2;
+  --mainBlue: #1971d5;
   --secondaryGreen: #5fb523;
   --textColor: #434b54;
   --mainWhite: #f0f0f0;
@@ -260,7 +260,7 @@ article .child {
   display: inline-block;
 }
 
-.custom-file-input input[type="file"] {
+.custom-file-input input[type='file'] {
   visibility: hidden;
   width: 1px;
   height: 1px;
@@ -284,7 +284,7 @@ article .child {
   color: #777;
 }
 
-.custom-file-input input[type="file"]:focus + label::after {
+.custom-file-input input[type='file']:focus + label::after {
   color: var(--textColor);
 }
 
@@ -418,7 +418,7 @@ form {
 }
 
 /* Style the file input */
-.field input[type="file"] {
+.field input[type='file'] {
   height: auto;
   padding: 0;
   border: none;
@@ -440,7 +440,7 @@ form {
   max-width: 500px;
 }
 
-.actions input[type="submit"] {
+.actions input[type='submit'] {
   background-color: var(--secondaryGreen);
   color: #f0f0f0;
   font-size: 1rem;
@@ -451,7 +451,7 @@ form {
   width: 100%;
 }
 
-.actions input[type="submit"]:hover {
+.actions input[type='submit']:hover {
   opacity: 0.8;
 }
 
