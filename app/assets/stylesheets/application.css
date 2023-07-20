@@ -68,7 +68,6 @@ main {
   background: var(--mainWhite);
   border: 1px solid whitesmoke;
   margin-top: 60px;
-  height: calc(100vh - 70px);
 }
 
 #splash_screen {
